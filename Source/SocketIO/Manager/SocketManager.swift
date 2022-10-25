@@ -139,7 +139,7 @@ open class SocketManager : NSObject, SocketManagerSpec, SocketParsable, SocketDa
     ///
     /// - parameter socketURL: The url of the socket.io server.
     /// - parameter config: The config for this socket.
-    public init(socketURL: URL, config: SocketIOClientConfiguration = []) {
+    public required init(socketURL: URL, config: SocketIOClientConfiguration = []) {
         self._config = config
         self.socketURL = socketURL
 
